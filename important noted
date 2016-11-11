@@ -1,0 +1,118 @@
+ม่เป็นไร Sine 
+
+Don't mention it ,you can use this: ไม่เป็นไร ทราย
+
+
+1, cd ~/repo-directory
+2, 
+    git checkout destination-branch-name 
+    git pull origin destination-branch-name
+
+3,  git checkout source-branch-name
+4,  git merge destination-branch-name
+5,  git add filename.txt
+    git commit -m'commit message'
+6,  git push origin source-branch-name
+
+
+
+ cd ~/.smartgit/6.5
+
+rm settings.xml
+
+
+Implemented version *0.2.37.115*
+Implemented version *0.1.35.128*
+
+
+https://webapp.stg.deliveree.com/api/v3/swagger_doc
+
+JSONObject bookingJSONObject = response.getJSONObject("object");
+                    booking = new Gson().fromJson(bookingJSONObject.toString(), Booking.class);
+
+Android team have just built Deliveree Driver V 0.2.35.109 and User App V 0.33.118
+Please have a look
+thanks
+
+- Deriver with keystore: sss.android.cyclone
+- User with keystore: deliveree.com
+- Survey with keystore: survey6sao
+
+
+- change color when dialog appear
+- change icon notification 
+- pop up time hour show luc delivery on progress
+
+- check again if not have platnumber, avatar bj lech
+
+
+
+
+///////////////////////////////////////////
+// Nghiep.Nguyen - Sept 3rd, 2015
+// Method is called to check Booking has available with service type.
+
+  // ===========================================================
+    // Constants
+    // ===========================================================
+
+    // ===========================================================
+    // Fields
+    // ===========================================================
+    public static void unsubscribeToAllChannels() {
+        ParseInstallation installation = ParseInstallation
+                .getCurrentInstallation();
+
+        installation.put("channels", new ArrayList<String>());
+
+        List<String> setOfAllSubscriptions = new ArrayList<String>();
+
+        setOfAllSubscriptions.add("Everyone");
+
+        installation.addAll("channels", setOfAllSubscriptions);
+
+        installation.saveInBackground();
+    }
+    public static void subscribeToAllChannels(Context context) {
+        ParseInstallation installation = ParseInstallation
+                .getCurrentInstallation();
+        installation.put("channels", new ArrayList<String>());
+
+        List<String> listOfAllSubscriptions = new ArrayList<String>();
+
+        listOfAllSubscriptions.add("Everyone");
+
+        if (DriverUserManager.isLoggedIn(context)) {
+            listOfAllSubscriptions.add("available_bookings");
+            listOfAllSubscriptions.add("driver");
+        }
+
+        installation.addAll("channels", listOfAllSubscriptions);
+
+        installation.saveEventually();
+    }
+
+    // ===========================================================
+    // Constructors
+    // ===========================================================
+
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
+
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
+
+    // ===========================================================
+    // Public Methods
+    // ===========================================================
+
+    // ===========================================================
+    // Private Methods
+    // ===========================================================
+
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
+
